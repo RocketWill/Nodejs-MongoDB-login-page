@@ -31,6 +31,8 @@ app.use(session({
     saveUninitialized: true,
 }));
 
+app.use('/static', express.static('static'))
+
 //Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
